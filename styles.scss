@@ -1,0 +1,148 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker:400|Maven+Pro:400);
+
+@font-face {
+  font-family: 'Boston Traffic';
+  src: url('fonts/boston.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+html {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: #fff;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  overflow: hidden;
+}
+
+article {
+  background-color: hsla(0,0%,0%,.5);
+  font-size: 4rem;
+  height: 22rem;
+  left: 50%;
+  margin-left: -25rem;
+  margin-top: -14rem;
+  padding: 15px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  width: 50rem;
+  p {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+  }
+}
+
+.about {
+  color: #fff;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 14px;
+  text-align: right;
+  a {
+    color: #D16D2F;
+    text-decoration: none;
+  }
+}
+
+footer {
+  bottom: 0;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 12px;
+  right: 0;
+  padding-right: 10px;
+  position: absolute;
+  a {
+    color: #D16D2F;
+    text-decoration: none;
+  }
+  p {
+    margin: 0 auto;
+    text-align: right;
+    width: 250px;
+  }
+}
+
+label {
+  display: block;
+}
+
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: normal;
+  line-height: 3.3rem;
+  margin-top: 15px;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.fake {
+  color: white;
+  font-family: 'Boston Traffic', sans-serif;
+  font-size: 2.5vw;
+  display: none;
+  position: absolute;
+  left: 14vw;
+  max-width: 20vw;
+  opacity: .7;
+  text-align: center;
+  top: 45%;
+  -moz-transform: rotate(-1deg) skewX(2deg) skewY(-4deg);
+  -webkit-transform: skewX(-9deg) skewY(-4deg) rotateX(-54deg);  // -o-transform: rotate(-1deg) skewX(2deg) skewY(-4deg);
+  -ms-transform: rotate(-1deg) skewX(2deg) skewY(-4deg);
+  transform: rotate(-1deg) skewX(2deg) skewY(-4deg);
+  word-wrap: break-word;
+  span {
+    background: url(img/filter-d.png);
+  }
+}
+
+@media only screen and (min-width: 620px) and (max-width : 800px) {
+  .fake {
+    left: 12vw;
+    top: 35vw;
+  }
+}
+
+@media only screen and (min-width: 545px) {
+  html {
+    background-image: url(img/sidewalk-cropped.png);
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  html {
+    background-image: url(img/sidewalk-cropped-mobile-a.png);
+  }
+  article {
+    font-size: 3rem;
+    margin-left: -15rem;
+    width: 30rem;
+    input {
+      font-size: 1.6rem;
+    }
+  }
+  .fake {
+    font-size: 4vw;
+    left: 4%;
+    max-width: 30vw;
+    top: 47%;
+  }
+}

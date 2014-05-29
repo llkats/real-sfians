@@ -1,0 +1,20 @@
+{
+  "name": "real-sfians",
+  "version": "0.0.0",
+  "description": "just some dumb satire on a friday night",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "author": "llkats",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-sass": "~0.7.1",
+    "takana": "0.0.8"
+  }
+}

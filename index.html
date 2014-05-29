@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>real sfians</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section>
+    <p class="about">in response to<a href="http://uptownalmanac.com/2014/04/confused-valencia-street-now-segregating-techies-and-real-san-franciscans"> a recent occurrence</a></p>
+    <article>
+      <label>Who doesn't belong in SF?</label>
+      <input id="scapegoats" placeholder="techies" maxlength="60" type="text" />
+      <p>click the text above, type your own outcasts, and press enter</p>
+    </article>
+    <div class="fake"><span id="blame"></span></div>
+  </section>
+  <footer>
+    <p>made with ಠ_ಠ by<a href="http://www.twitter.com/llkats"> @llkats</a>, <a href="http://www.llkats.com">llkats.com</a></p>
+  </footer>
+  <script>
+
+  (function() {
+    var goats = document.getElementById('scapegoats');
+    var blame = document.getElementById('blame');
+
+    var gtfo = [
+      'llamas',
+      'your mom',
+      'people who run red lights',
+      'litterers',
+      'people who throw sunflower seed husks on muni floors',
+      'anyone who hates karl the fog',
+      'doofuses',
+      'LEPROSY-CARRYING ARMADILLOS',
+      'dodgers fans'
+    ];
+
+    var index = Math.floor(Math.random() * gtfo.length);
+
+    goats.placeholder = gtfo[index];
+
+    // http://shebang.brandonmintern.com/foolproof-html-escaping-in-javascript/
+    var escapeHtml = function(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    goats.addEventListener('keypress', function(e) {
+      if (e.which == 13) {
+        var val = e.target.value;
+
+        // if input is empty, use placeholder value
+        if (val == '') {
+          blame.innerHTML = e.target.placeholder;
+        } else {
+          blame.innerHTML = escapeHtml(val);
+        }
+
+        // hide the input, show the spraypaint
+        goats.parentNode.style.display = 'none';
+        blame.parentNode.style.display = 'block';
+
+        // correct tall spraypaints' top offset
+        if (blame.clientHeight > 80) {
+          blame.style.marginTop = (blame.clientHeight / 2 * -1) + 'px';
+        }
+      }
+    });
+  }());
+
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-16929739-1', 'llkats.com');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>
